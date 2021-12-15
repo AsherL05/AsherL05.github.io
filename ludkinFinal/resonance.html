@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<title>FUNNY FISH FINAL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" type="image/x-icon" href="FFFH.ico">
+<body>
+<DIV ID="div1" CLASS="s1">🐟</DIV>
+<DIV ID="div2" CLASS="s2">🐠</DIV>
+<DIV ID="div3" CLASS="s3">🎣</DIV>
+<DIV ID="div4" CLASS="s4">🎏</DIV>
+
+
+
+<SCRIPT LANGUAGE="javascript" TYPE="text/javascript">
+
+/*
+Script by Mike McGrath- http://website.lineone.net/~mike_mcgrath
+Featured on JavaScript Kit (http://javascriptkit.com)
+For this and over 400+ free scripts, visit http://javascriptkit.com
+*/
+
+//Updated Feb 20th, 08 by JavaScriptKit.com: Script now compatible in IE7/FF 
+
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;
+var x = 0;
+var x_offset = 5;
+var y = 0;
+var y_offset = 15;
+
+document.onmousemove = get_mouse; 
+
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft;
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop;
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px'
+				document.getElementById('div'+n).style.left=x+'px'
+				document.getElementById('div'+n).style.visibility='visible'
+    n++;
+    tmr=setTimeout("beam("+n+")",spd);
+  }
+  else
+  {
+     clearTimeout(tmr);
+     fade(4);
+  }   
+} 
+
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden'
+    n--;
+    tmr=setTimeout("fade("+n+")",spd);
+  }
+  else clearTimeout(tmr);
+} 
+
+// -->
+</SCRIPT>
+
+<head>
+  
+<STYLE TYPE="text/css">
+<!--
+
+BODY{
+overflow-x:hidden;
+}
+
+.s1
+{
+  position  : absolute;
+  font-size : 100pt;
+  color     : blue;
+  visibility: hidden;
+}
+
+.s2
+{
+  position  : absolute;
+  font-size : 180pt;
+  color     : red;
+	visibility : hidden;
+}
+
+.s3
+{
+  position  : absolute;
+  font-size : 140pt;
+  color     : gold;
+	visibility : hidden;
+}
+
+.s4
+{
+  position  : absolute;
+  font-size : 120pt;
+  color     : lime;
+	visibility : hidden;
+}
+
+//-->
+</STYLE>
+</head>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>AL</b>FISHIE HOMIES</a>
+    <div class="w3-right w3-hide-small">
+      <a href="resonance.html" class="w3-bar-item w3-button">MEET THE FISH</a>
+	  <a href="smartboats.html" class="w3-bar-item w3-button">LEARN THE TECHNOLOGY</a>
+      <a href="observe.html" class="w3-bar-item w3-button">OBSERVE THE CREATURES</a>
+	  <a href="spend.html" class="w3-bar-item w3-button">REDUCE YOUR KROMER</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="FFF.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>NG</b></span> <span class="w3-hide-small w3-text-light-grey">Asher's CSP Final</span></h1>
+  </div>
+</header>
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">WHAT!?</h3>
+    <p>IT"S FUNNY FISH FINAL, FINALLY TIME FOR SOME FUNNY FISH! THESE FISH SURE ARE FUNNY! FUNNY FISH!
+    </p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="plab.gif" alt="REAL HOLLYWOOD FISH" style="width:100%">
+      <h3>PLAB</h3>
+      <p class="w3-opacity">FUNNIEST FISH</p>
+      <p>THE ORIGINAL FUNNY FISH, PLAB IS TO BE CONTAINED AND MONITORED AT ALL TIMES. IF CONTAINMENT OF PLAB WERE TO BE BREACHED, THE WORLD WOULD SOON END FROM ASPHYXIATION</p>
+      <p><button  class="w3-button w3-light-grey w3-block"><a href="https://epicness.fandom.com/wiki/Plab">FORBIDDEN GOVERNMENT DOCUMENTS</a></button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="glooglysmogger.gif" alt="shield your eyes" style="width:100%">
+      <h3>GL☺☺GLYSM☺GER</h3>
+      <p class="w3-opacity">REALLY HAPPY FISH</p>
+      <p>THE GL☺☺GLYSMOGER IS THE [all smiles] FISH FR☺M [家家家] HE [never-never] ST☺PS SMILING. ALL DAY SMILES NEVER ST☺PS. GET CL☺SE. GET [personal] LET IT NEVER [abandon] Y☺UR SIGHT.</p>
+      <p><button class="w3-button w3-light-grey w3-block">{redacted}</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="stick.gif" alt="stick" style="width:80%">
+      <h3>STICK FISH</h3>
+      <p class="w3-opacity">OR JUST REGULAR FISH</p>
+      <p>IS HE A STICK? IS HE A FISH? I DON'T KNOW! THE CAMERAMAN THINKS IT'S A FISH. BUT IT COULD BE A STICK. IT COULD ALSO BE AN OTHERWORLDLY RELIGIOUS FIGURE! NO MATTER WHAT, THIS IS FUNNY!</p>
+      <p><button class="w3-button w3-light-grey w3-block"><a href="https://forms.gle/chD5RmySYHCi45e18">DEBATE</a></button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="catch.gif" alt="he will never leave" style="width:100%">
+      <h3>"Smart Boats"</h3>
+      <p class="w3-opacity">REQUIRED FISH TECHNOLOGY</p>
+      <p>Here's two happy fishermen playing catch with their earnings. The Smart Boat helped them catch this silly little guy. (Disclaimer: Smart Boats do not have a cool fish magnet that lets you play boomerang with fish, sorry)</p>
+      <p><button class="w3-button w3-light-grey w3-block"><a href="smartboats.html">More Information</a></button></p>
+    </div>
+  </div>
+
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a  title="W3.CSS" target="_blank" class="w3-hover-text-green">Asher's desire to pass this class, and love for funny fish.</a></p>
+</footer>
+
+</body>
+</html>

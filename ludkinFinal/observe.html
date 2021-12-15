@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Land of the Fishies</title>
+<link rel="icon" type="image/png" href="HHHF.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="icon" type="image/x-icon" href="FFFH.ico">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+
+</style>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>AL</b>FISHIE EXHIBITIE</a>
+    <div class="w3-right w3-hide-small">
+      <a href="resonance.html" class="w3-bar-item w3-button">MEET THE FISH</a>
+	  <a href="smartboats.html" class="w3-bar-item w3-button">LEARN THE TECHNOLOGY</a>
+      <a href="observe.html" class="w3-bar-item w3-button">OBSERVE THE CREATURES</a>
+	  <a href="spend.html" class="w3-bar-item w3-button">REDUCE YOUR KROMER</a>
+    </div>
+  </div>
+</div>
+<body class="w3-light-grey">
+<DIV ID="div1" CLASS="s1">🐟</DIV>
+<DIV ID="div2" CLASS="s2">🐠</DIV>
+<DIV ID="div3" CLASS="s3">🎣</DIV>
+<DIV ID="div4" CLASS="s4">🎏</DIV>
+
+
+<SCRIPT LANGUAGE="javascript" TYPE="text/javascript">
+
+/*
+Script by Mike McGrath- http://website.lineone.net/~mike_mcgrath
+Featured on JavaScript Kit (http://javascriptkit.com)
+For this and over 400+ free scripts, visit http://javascriptkit.com
+*/
+
+//Updated Feb 20th, 08 by JavaScriptKit.com: Script now compatible in IE7/FF 
+
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;
+var x = 0;
+var x_offset = 5;
+var y = 0;
+var y_offset = 15;
+
+document.onmousemove = get_mouse; 
+
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft;
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop;
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px'
+				document.getElementById('div'+n).style.left=x+'px'
+				document.getElementById('div'+n).style.visibility='visible'
+    n++;
+    tmr=setTimeout("beam("+n+")",spd);
+  }
+  else
+  {
+     clearTimeout(tmr);
+     fade(4);
+  }   
+} 
+
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden'
+    n--;
+    tmr=setTimeout("fade("+n+")",spd);
+  }
+  else clearTimeout(tmr);
+} 
+
+// -->
+</SCRIPT>
+
+<head>
+<STYLE TYPE="text/css">
+<!--
+
+BODY{
+overflow-x:hidden;
+}
+
+.s1
+{
+  position  : absolute;
+  font-size : 100pt;
+  color     : blue;
+  visibility: hidden;
+}
+
+.s2
+{
+  position  : absolute;
+  font-size : 180pt;
+  color     : red;
+	visibility : hidden;
+}
+
+.s3
+{
+  position  : absolute;
+  font-size : 140pt;
+  color     : gold;
+	visibility : hidden;
+}
+
+.s4
+{
+  position  : absolute;
+  font-size : 120pt;
+  color     : lime;
+	visibility : hidden;
+}
+
+//-->
+</STYLE>
+</head>
+
+<!-- Top menu on small screens -->
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="plab.gif" style="width:100%" onclick="onClick(this)" alt="It's Him!">
+      <img src="glooglysmogger.gif" style="width:100%" onclick="onClick(this)" alt="☺☺☺☺☺☺☺☺☺">
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="lefish.jpg" style="width:100%" onclick="onClick(this)" alt="Ah, ma petite chou-fleur.">
+      <img src="tumourfish.jpg" style="width:100%" onclick="onClick(this)" alt="I've done nothing but teleport fish for three days">
+      <img src="watcher.jpg" style="width:100%" onclick="onClick(this)" alt="Even when you close this tab, he will be watching.">
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="ciggie.jpg" style="width:100%" onclick="onClick(this)" alt="Can't get lung cancer when you don't have lungs!">
+      <img src="coolfish.jpg" style="width:100%" onclick="onClick(this)" alt="He is crying underneath">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="yup.jpg" style="width:100%" onclick="onClick(this)" alt="Of course she's funny, it says so right there!">
+      <img src="varren.jpg" style="width:100%" onclick="onClick(this)" alt="I told that guy not to say Plab was unfunny.">
+      <img src="spoonful.gif" style="width:100%" onclick="onClick(this)" alt="Yo fish can I get some cereal? Only a spoonful?">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="ME.png" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Asher L.</h4>
+      <p>Some text about me. I love taking photos of FISH. I am fish taking picture of extraordinaire. Every day I wake up, take picture of fish, get out of bed, eat fish, drink fish, take picture of fish, watch a tv show about some guys taking pictures of fish, take pictures of the tv show of the guys taking pictures of fish, print all of these pictures of fish, frame them on my wall, go fishing, take pictures of my earnings, sleep on a raft, record myself sleeping on the raft, if there are any fish I take screenshots of those fish, I wake up, Swim home, eat my extra fish pictures, drive around town, mark my fish territory with framed fish pictures, fish slap any fish opps, go home, sleep, dream about fish, and repeat. 
+      </p>
+      <p>email: fishman@fish.fish</p>
+      <p>tel: 3474 56837</p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Skills that Gills</h4>
+      <p class="w3-wide">Fish Knowledge</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:130%">130%</div>
+      </div>
+      <p class="w3-wide">Photography</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:110%">110%</div>
+      </div>
+      <p class="w3-wide">Sanity</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:40%">40%</div>
+      </div>
+      <hr class="w3-opacity">
+
+      <h4 class="w3-padding-16">Want some fish pictures for your own?</h4>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-white w3-center">
+            <li class="w3-black w3-xlarge w3-padding-32">Basic Fishture</li>
+            <li class="w3-padding-16">Pic of a fish</li>
+            <li class="w3-padding-16">Your choice of fish</li>
+            <li class="w3-padding-16">Glorious 144p</li>
+            <li class="w3-padding-16">Sentience Guranteed</li>
+            <li class="w3-padding-16">
+              <h2>$ 5300</h2>
+              <span class="w3-opacity">per fortnite</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="w3-half">
+          <ul class="w3-ul w3-white w3-center">
+            <li class="w3-black w3-xlarge w3-padding-32">Mega Fish Pro Bundle</li>
+            <li class="w3-padding-16">Fish Pictures but a lot</li>
+            <li class="w3-padding-16">a lot and also big</li>
+            <li class="w3-padding-16">480p :o</li>
+            <li class="w3-padding-16">You will not live without them</li>
+            <li class="w3-padding-16">
+              <h2>Free</h2>
+              <span class="w3-opacity">per ever</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>Do you want me to photograph you? Prove to me that you're a fish with the quiz below.</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Do you live in water</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Are you funny</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Your SSN</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Give me it.</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>My arms are sore, my surrondings are bland. Every day I sit alone, with my only company being in my head. They tell me how to leave, but I was instructed not to listen.</p>      
+      </div>
+    
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="fisheverywhere.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">It's 4:30</span><br>
+            <span>There's fish everywhere, fish everywhere.</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="routine.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Every day</span><br>
+            <span>My fishie routine, time is my master, keep everything clean.</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Doctor</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">I</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">can't</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">tell</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">if</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">I'm</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">not</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">me</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://imgur.com/gallery/JjN1zOP" title="W3.CSS" target="_blank" class="w3-hover-opacity">The Atlantian Psycho</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>

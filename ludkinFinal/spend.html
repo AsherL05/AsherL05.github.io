@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<title>SHOP A FISHERA</title>
+<link rel="icon" type="image/png" href="HHHF.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="icon" type="image/x-icon" href="FFFH.ico">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+<DIV ID="div1" CLASS="s1">🐟</DIV>
+<DIV ID="div2" CLASS="s2">🐠</DIV>
+<DIV ID="div3" CLASS="s3">🎣</DIV>
+<DIV ID="div4" CLASS="s4">🎏</DIV>
+
+
+
+<SCRIPT LANGUAGE="javascript" TYPE="text/javascript">
+
+/*
+Script by Mike McGrath- http://website.lineone.net/~mike_mcgrath
+Featured on JavaScript Kit (http://javascriptkit.com)
+For this and over 400+ free scripts, visit http://javascriptkit.com
+*/
+
+//Updated Feb 20th, 08 by JavaScriptKit.com: Script now compatible in IE7/FF 
+
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;
+var x = 0;
+var x_offset = 5;
+var y = 0;
+var y_offset = 15;
+
+document.onmousemove = get_mouse; 
+
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft;
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop;
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px'
+				document.getElementById('div'+n).style.left=x+'px'
+				document.getElementById('div'+n).style.visibility='visible'
+    n++;
+    tmr=setTimeout("beam("+n+")",spd);
+  }
+  else
+  {
+     clearTimeout(tmr);
+     fade(4);
+  }   
+} 
+
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden'
+    n--;
+    tmr=setTimeout("fade("+n+")",spd);
+  }
+  else clearTimeout(tmr);
+} 
+
+// -->
+</SCRIPT>
+
+<STYLE TYPE="text/css">
+<!--
+
+BODY{
+overflow-x:hidden;
+}
+
+.s1
+{
+  position  : absolute;
+  font-size : 100pt;
+  color     : blue;
+  visibility: hidden;
+}
+
+.s2
+{
+  position  : absolute;
+  font-size : 180pt;
+  color     : red;
+	visibility : hidden;
+}
+
+.s3
+{
+  position  : absolute;
+  font-size : 140pt;
+  color     : gold;
+	visibility : hidden;
+}
+
+.s4
+{
+  position  : absolute;
+  font-size : 120pt;
+  color     : lime;
+	visibility : hidden;
+}
+
+//-->
+</STYLE>
+</head>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>AL</b>FISHIE MERCHIE</a>
+    <div class="w3-right w3-hide-small">
+      <a href="resonance.html" class="w3-bar-item w3-button">MEET THE FISH</a>
+	  <a href="smartboats.html" class="w3-bar-item w3-button">LEARN THE TECHNOLOGY</a>
+      <a href="observe.html" class="w3-bar-item w3-button">OBSERVE THE CREATURES</a>
+	  <a href="spend.html" class="w3-bar-item w3-button">REDUCE YOUR KROMER</a>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar (hidden by default) -->
+
+
+<!-- Top menu -->
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="plabpillow.jpg" alt="Sandwich" style="width:100%">
+      <h3>PLAB PILLOW</h3>
+      <p>K$5289 SLEEP WITH HIM</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="fishh.jpg" alt="Steak" style="width:100%">
+      <h3>FISH THAT EATS INFERIOR BEINGS</h3>
+      <p>K$6749 ALL OTHER NON-AQUATICS WILL BE DEVOURED</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="it.jpg" alt="Cherries" style="width:100%">
+      <h3>YUP, THIS WHOLE SHARK IS FOR SALE</h3>
+      <p>K$0 TAKE IT WE DON'T WANT IT</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="true.jpg" alt="Cigarettes and Wine" style="width:100%">
+      <h3>STRIKE FEAR INTO THE FISH</h3>
+      <p>K$4782 BLOCKS SUN WELL</p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="maniloveman.jpg" alt="Popsicle" style="width:100%">
+      <h3>MAN I LOVE FISHING</h3>
+      <p>K$1574 YOUR WIFE WILL LOVE IT</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="alsotrue.jpg" alt="Salmon" style="width:100%">
+      <h3>THEY FEAR MY FISH</h3>
+      <p>K$5828 RIGHTFULLY SO</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="schizoid.jpg" alt="Sandwich" style="width:100%">
+      <h3>THERE IS A FISH NEXT TO ME AT ALL TIMES</h3>
+      <p>K$9654 WATCHING WATCHING ALWAYS</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="fishflops.jpg" alt="Croissant" style="width:100%">
+      <h3>FISH FLOPS</h3>
+      <p>K$2753 WOW, I DO NOT LIKE THIS</p>
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
